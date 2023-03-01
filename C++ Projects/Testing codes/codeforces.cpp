@@ -4,26 +4,35 @@ using namespace std;
 
 int main()
 {
-    int a[100];
-    string b;
+    int x = 0, count = 0, y = 0, n;
+    cin >> n;
+    string a;
 
-     cin >> a;
-    
+    cin >> a;
 
-    for (int j = 0; j < 100; j++)
+    for (int i = 0; i <= n; i++)
     {
-        if (a[j] != '\000')
+        for (int j = 0; j < n; j++)
         {
-            cout << a[j] ;
-        }
+            if (a[i] == a[j])
+            {
+                count++;
+                x = count;
 
-        else
-            break;
+                if (x > 1)
+                {
+                    y = x - 1;
+                }
+            }
+
+            else
+            {
+                count = 0 ;
+            }
+        }
+        
         
     }
-    
-    //cout << a;
 
-
-    return 0;
+    cout << y ;
 }
