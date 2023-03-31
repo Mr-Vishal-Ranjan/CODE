@@ -4,193 +4,109 @@ using namespace std;
 
 int main()
 {
-    int n, x = 0, y = 0, z = 0;
-
+    int n;
     cin >> n;
 
-
-    int arr[n];
+    int student[n];
 
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];
+        cin >> student[i];
     }
 
+    int x = 0, y = 0, z = 0;
+
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] == 1)
+        if (student[i] == 1)
         {
             x++;
         }
 
-        else if (arr[i] == 2)
+        else if (student[i] == 2)
         {
             y++;
         }
 
-        else if (arr[i] == 3)
+        else if (student[i] == 3)
         {
             z++;
         }
     }
 
+    int temp = 0;
+
     if ((x < y || x == y) && (x < z || x == z))
     {
-        if (x == 0)
-        {
-            cout << x ;
-            exit(0);
-        }
-        
-        cout << x << endl;
-        int arr1[x][3];
-
-        for (int i = 0; i < x; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                if (arr[j] == 1)
-                {
-                    if (arr1[i][0] < 0 || arr1[i][0] > 1000)
-                    {
-                        arr1[i][0] = j + 1;
-                        arr[j] = 0;
-                    }
-                }
-
-                else if (arr[j] == 2)
-                {
-                    if (arr1[i][1] < 0 || arr1[i][1] > 1000)
-                    {
-                        arr1[i][1] = j + 1;
-                        arr[j] = 0;
-                    }
-                }
-
-                else if (arr[j] == 3)
-                {
-                    if (arr1[i][2] < 0 || arr1[i][2] > 1000)
-                    {
-                        arr1[i][2] = j + 1;
-                        arr[j] = 0;
-                    }
-                }
-            }
-        }
-
-        for (int i = 0; i < x; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                cout << arr1[i][j] << " ";
-            }
-            cout << endl;
-        }
+        temp = x;
     }
 
     else if ((y < x || y == x) && (y < z || y == z))
     {
-        if (y == 0)
-        {
-            cout << y;
-            exit(0);
-        }
-        cout << y << endl;
-        int arr1[y][3];
-
-        for (int i = 0; i < y; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                if (arr[j] == 1)
-                {
-                    if (arr1[i][0] < 0 || arr1[i][0] > 1000)
-                    {
-                        arr1[i][0] = j + 1;
-                        arr[j] = 0;
-                    }
-                }
-
-                else if (arr[j] == 2)
-                {
-                    if (arr1[i][1] < 0 || arr1[i][1] > 1000)
-                    {
-                        arr1[i][1] = j + 1;
-                        arr[j] = 0;
-                    }
-                }
-
-                else if (arr[j] == 3)
-                {
-                    if (arr1[i][2] < 0 || arr1[i][2] > 1000)
-                    {
-                        arr1[i][2] = j + 1;
-                        arr[j] = 0;
-                    }
-                }
-            }
-        }
-
-        for (int i = 0; i < y; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                cout << arr1[i][j] << " ";
-            }
-            cout << endl;
-        }
+        temp = y;
     }
 
     else if ((z < y || z == y) && (z < x || z == x))
     {
-        if (z == 0)
-        {
-            cout << z;
-            exit(0);
-        }
-        cout << z << endl;
-        int arr1[z][3];
+        temp = z;
+    }
 
-        for (int i = 0; i < z; i++)
+    if (temp == 0)
+    {
+        cout << "0";
+        exit(0);
+    }
+
+    cout << temp << endl;
+
+    int team[temp][3];
+
+    for (int i = 0; i < temp; i++)
+    {
+        int r = 0, v = 1;
+
+        while (v < 3)
         {
-            for (int j = 0; j < n; j++)
+
+            if (student[r] == 1)
             {
-                if (arr[j] == 1)
+                if (team[i][0] > n || team[i][0] < 0)
                 {
-                    if (arr1[i][0] < 0 || arr1[i][0] > 1000)
-                    {
-                        arr1[i][0] = j + 1;
-                        arr[j] = 0;
-                    }
+                    team[i][0] = r + 1;
+                    student[r] = 0;
+                    v++;
+                    r++;
                 }
+            }
 
-                else if (arr[j] == 2)
+            if (student[r] == 2)
+            {
+                if (team[i][1] > n || team[i][1] < 0)
                 {
-                    if (arr1[i][1] < 0 || arr1[i][1] > 1000)
-                    {
-                        arr1[i][1] = j + 1;
-                        arr[j] = 0;
-                    }
+                    team[i][1] = r + 1;
+                    student[r] = 0;
+                    v++;
+                    r++;
                 }
+            }
 
-                else if (arr[j] == 3)
+            if (student[r] == 3)
+            {
+                if (team[i][2] > n || team[i][2] < 0)
                 {
-                    if (arr1[i][2] < 0 || arr1[i][2] > 1000)
-                    {
-                        arr1[i][2] = j + 1;
-                        arr[j] = 0;
-                    }
+                    team[i][2] = r + 1;
+                    student[r] = 0;
+                    v++;
+                    r++;
                 }
             }
         }
 
-        for (int i = 0; i < z; i++)
+        for (int j = 0; j < 3; j++)
         {
-            for (int j = 0; j < 3; j++)
-            {
-                cout << arr1[i][j] << " ";
-            }
-            cout << endl;
+            cout << team[i][j] << " ";
         }
+
+        cout << endl;
     }
 }
