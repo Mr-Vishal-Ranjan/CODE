@@ -2,7 +2,7 @@
 
 int main()
 {
-    int arr[10], x = 0, y = 99999;
+    int arr[10], x , y;
 
     printf("Enter Elements in array :-- \n");
 
@@ -10,6 +10,9 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
+
+    x = y = arr[0] ;
+    //y = arr[0] ;
 
     for (int i = 0; i < 10; i++)
     {
