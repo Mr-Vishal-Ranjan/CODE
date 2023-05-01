@@ -2,11 +2,11 @@
 
 using namespace std;
 
-class account
+class Account
 {
 private:
     int balance;
-    static float rate;
+    static float rate ;
 
 public:
     void setBalance(int b)
@@ -25,13 +25,13 @@ public:
     }
 };
 
-// float account :: rate = 3.5f;
+float Account :: rate ;
 
 int main()
 {
-    account a1, a2;
-    a1.setRate(4.5);
-    //account :: setRate(4.5);
+    Account a1, a2;
+    a1.setRate(4.5);// OR //Account :: setRate(4.5);
 
-    a1.show_rate();
-}
+    a1.show_rate(); // OR //Account :: show_rate();
+    a2.show_rate();
+} 
