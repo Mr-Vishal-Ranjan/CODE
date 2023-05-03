@@ -6,15 +6,12 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "linux-gcc-x64",
+            "intelliSenseMode": "linux-clang-x64",
             "configurationProvider": "ms-vscode.makefile-tools",
-            "mergeConfigurations": false,
-            "browse": {
-                "limitSymbolsToIncludedHeaders": false
-            }
+            "compileCommands": "${workspaceFolder}/C++ Projects/C++ Course/Source Codes/Section-17-Smart-Pointers-Source-code/Section17/.codelite/compile_commands.json",
+            "compilerPath": "/usr/bin/g++"
         }
     ],
     "version": 4
