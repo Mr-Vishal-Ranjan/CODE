@@ -6,21 +6,47 @@ int main()
 {
     int a, b, c;
     cin >> a >> b >> c;
-    int arr[c];
-    int num = 1, count = 0;
 
-    while (count != c)
+    int cth_num;
+
+    for (int i = 2; c > 0; i++)
     {
-        if (num % 3 == 0 || num % 5 == 0)
+        if (i % a == 0 || i % b == 0)
         {
-            arr[count] = num;
-            count++;
+            cth_num = i;
+            c--;
         }
-        num++;
     }
-    int x = arr[c - 1];
-    while (x > -1)
+
+    int lcm;
+    for (int i = 1; i <= a * b; i++)
     {
-        cout << x << " ";
-        x -= (a * b);
+        if (i % a == 0 && i % b == 0)
+        {
+            lcm = i;
+            break;
+        }
     }
+
+    int step;
+
+    if (cth_num % a == 0 && cth_num % b == 0)
+    {
+        step = lcm;
+    }
+
+    else if (cth_num % a == 0)
+    {
+        step = a;
+    }
+
+    else if (cth_num % b == 0)
+    {
+        step = b;
+    }
+
+    for (int i = cth_num; i >= 0; i -= step)
+    {
+        cout << i << " ";
+    }
+}
