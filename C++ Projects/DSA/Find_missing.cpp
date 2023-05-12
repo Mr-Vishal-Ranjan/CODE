@@ -7,26 +7,53 @@ class Solution
 {
 
 public:
-    vector<long long> findMissing(long long a[], long long b[], int n, int m)
+    vector<long long> findMissing(long long A[], long long B[], int N, int M)
     {
-        unordered_map<long long, int> mp;
-        vector<long long> ans;
-        for (int i = 0; i < m; i++)
-            mp[b[i]] = 1;
+        // Your code goes here
+        vector<long long> v ;
+        long long b[99999];
 
-        for (int i = 0; i < n; i++)
+        // for (int i = 0; i < N; i++)
+        // {
+        //     int count = 0;
+        //     for (int j = 0; j < M; j++)
+        //     {
+        //         if (A[i] == B[j])
+        //         {
+        //             count++;
+        //         }
+        //     }
+
+        //     if (count == 0)
+        //     {
+        //         v.push_back(A[i]);
+        //     }
+        // }
+
+        for (int i = 0; i < M; i++)
         {
-            if (!mp[a[i]])
-                ans.push_back(a[i]);
+            int temp;
+            temp = B[i];
+            b[temp] = 1;
         }
+        
+        for (int i = 0; i < N; i++)
+        {
+            int temp;
+            temp = A[i];
+            if(b[temp] != 1)
+            {
+                v.push_back(temp);
+            }
+        }
+        
 
-        return ans;
+        return v;
     }
 };
 //{ Driver Code Starts.
 
 int main()
-
 {
 
     int t;
