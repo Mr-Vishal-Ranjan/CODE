@@ -1,4 +1,4 @@
-for (int i = 0; i < 3; i++)
-    // {
-    //     cout << final[i];
-    // }
+if (array[mid + 1] != array[e])
+    {
+        fun(array,mid + 1,e);
+    }
