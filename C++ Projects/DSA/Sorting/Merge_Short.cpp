@@ -2,9 +2,9 @@
 
 using namespace std;
 
-void fun(int array[5], int s, int e);
+void fun(int array[], int s, int e);
 
-void merge(int final[5], int m, int st, int ed);
+void merge(int final[], int m, int st, int ed);
 
 int main()
 {
@@ -17,7 +17,7 @@ int main()
 
     int start = 0, end = 5;
 
-    fun(arr, start, end);
+    fun(arr, start, end - 1);
 
     for (int i = 0; i < 5; i++)
     {
@@ -27,55 +27,64 @@ int main()
 
 void fun(int array[], int s, int e)
 {
-    int mid = (s + e) / 2;
+    if (s < e){
+        //return;
 
-    if (s == e)
-        return;
-
+    int mid = s + (e - s) / 2;
     fun(array, s, mid);
 
     fun(array, mid + 1, e);
 
     merge(array, mid, s, e);
+    }
 }
 
 void merge(int final[], int m, int st, int ed)
 {
-    int i = st, j = m + 1, k = 0;
+    int i , j , k ;
+    int x = m - st + 1, y = ed - m;
 
-    while (i < m && j < ed)
+    int l[x], r[y];
+
+    for (int i = 0; i < x; i++)
     {
-        if (final[i] > final[j])
+        l[i] = final[st + i];
+    }
+
+    for (int i = 0; i < y; i++)
+    {
+        r[i] = final[m + 1 + i];
+    }
+
+    i = 0; j = 0; k = st;
+
+    while (i < x && j < y)
+    {
+        if (l[i] >= r[j])
         {
-            final[k] = final[j];
+            final[k] = r[j];
             j++;
-            k++;
         }
 
         else
         {
-            final[k] = final[i];
+            final[k] = l[i];
             i++;
-            k++;
         }
+        k++;
     }
 
-    while (i < m)
+    while (i < x)
     {
-        final[k] = final[i];
+        final[k] = l[i];
         i++;
         k++;
     }
 
-    while (j < ed)
+    while (j < y)
     {
-        final[k] = final[j];
+        final[k] = r[j];
         j++;
         k++;
-    }
-
-    for (int i = 0; i < 5; i++)
-    {
-        final[i] = final[i];
     }
 }
