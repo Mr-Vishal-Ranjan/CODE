@@ -27,21 +27,22 @@ int main()
 
 void fun(int array[], int s, int e)
 {
-    if (s < e){
-        //return;
+    if (s < e)
+    {
+        // return;
 
-    int mid = s + (e - s) / 2;
-    fun(array, s, mid);
+        int mid = s + (e - s) / 2;
+        fun(array, s, mid);
 
-    fun(array, mid + 1, e);
+        fun(array, mid + 1, e);
 
-    merge(array, mid, s, e);
+        merge(array, mid, s, e);
     }
 }
 
 void merge(int final[], int m, int st, int ed)
 {
-    int i , j , k ;
+    int i, j, k;
     int x = m - st + 1, y = ed - m;
 
     int l[x], r[y];
@@ -56,7 +57,9 @@ void merge(int final[], int m, int st, int ed)
         r[i] = final[m + 1 + i];
     }
 
-    i = 0; j = 0; k = st;
+    i = 0;
+    j = 0;
+    k = st;
 
     while (i < x && j < y)
     {
