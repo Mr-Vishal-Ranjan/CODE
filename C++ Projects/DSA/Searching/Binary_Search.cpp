@@ -33,9 +33,9 @@ int main()
 int binary_search(int array[], int start, int end, int t)
 {
 
-    while (start < end)
+    while (start <= end)
     {
-        int mid = start + end / 2;
+        int mid = start + (end - start) / 2;
 
         if (array[mid] == t)
         {
@@ -44,13 +44,15 @@ int binary_search(int array[], int start, int end, int t)
 
         if (array[mid] < t)
         {
-            start = mid;
+            start = mid + 1;
         }
 
         else
         {
-            end = mid;
+            end = mid - 1;
         }
+
+        // cout << "v";
     }
 
     return -1;
