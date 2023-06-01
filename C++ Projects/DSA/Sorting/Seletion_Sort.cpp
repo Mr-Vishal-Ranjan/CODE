@@ -6,7 +6,6 @@ int main()
     int temp;
     for (int i = 0; i < 5; i++)
     {
-        int v = 0;
         temp = i;
         for (int j = i; j < 5; j++)
         {
@@ -14,14 +13,10 @@ int main()
             if (a[temp] > a[j])
             {
                 temp = j;
-                v = 1;
             }
         }
 
-        if (v = 1)
-        {
-            swap(a[i], a[temp]);
-        }
+        swap(a[i], a[temp]);
     }
 
     for (int i = 0; i < 5; i++)

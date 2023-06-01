@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void fun(int array[], int s, int e);
+void mergesort(int array[], int s, int e);
 
 void merge(int final[], int m, int st, int ed);
 
@@ -17,7 +17,7 @@ int main()
 
     int start = 0, end = 5;
 
-    fun(arr, start, end - 1);
+    mergesort(arr, start, end - 1);
 
     for (int i = 0; i < 5; i++)
     {
@@ -25,16 +25,16 @@ int main()
     }
 }
 
-void fun(int array[], int s, int e)
+void mergesort(int array[], int s, int e)
 {
     if (s < e)
     {
         // return;
 
         int mid = s + (e - s) / 2;
-        fun(array, s, mid);
+        mergesort(array, s, mid);
 
-        fun(array, mid + 1, e);
+        mergesort(array, mid + 1, e);
 
         merge(array, mid, s, e);
     }
