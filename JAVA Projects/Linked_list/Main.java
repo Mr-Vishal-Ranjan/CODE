@@ -13,19 +13,23 @@ public class Main {
         Node temp = new Node(array[0]);
         head = temp;
         for (int i = 1; i < 5; i++) {
-            Node temp1;
-            temp1 = new Node(array[i]);
-            temp.next = temp1;
-            if(i < array.length) {
-                temp = new Node(array[i + 1]);
-                i++;
-                temp1.next = temp;
-            }
+            temp.next = new Node(array[i]);
+            temp = temp.next;
+
+//            temp = t;
+//            Node temp1;
+//            temp1 = new Node(array[i]);
+//            temp.next = temp1;
+//            if(i < array.length) {
+//                temp = new Node(array[i + 1]);
+//                i++;
+//                temp1.next = temp;
+//            }
         }
-        Node temp3 = head;
-        while(temp3 != null){
-            System.out.println(temp3.val);
-            temp3 = temp3.next;
+        Node temp1 = head;
+        while(temp1 != null){
+            System.out.println(temp1.val);
+            temp1 = temp1.next;
         }
     }
 }
