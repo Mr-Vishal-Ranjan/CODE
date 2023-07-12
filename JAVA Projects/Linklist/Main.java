@@ -29,8 +29,8 @@ public class Main {
     private static void print(Node head) {
         Node temp = head;
         while(temp != null) {
-            System.out.println(temp.val);
-            temp = temp.next;
+                System.out.println(temp.val);
+                temp = temp.next;
         }
     }
 
