@@ -2,15 +2,15 @@ package Doubly_LL;
 public class D_LL {
     public static class Node{
         public int val;
-        public Node next;
-        public Node prev;
+        public Node next = null;
+        public Node prev = null;
         public Node(int val){
             this.val = val;
         }
     }
     public static void print_ll(Node head){
         Node temp = head;
-        while(temp.next != null){
+        while(temp != null){
             System.out.println(temp.val);
             temp = temp.next;
         }
