@@ -1,5 +1,5 @@
 package Contructor;
-class Student5{
+public class Student5{
     int id;
     String name;
     int age;
