@@ -1,9 +1,9 @@
 package Access_Modifiers;
 public class Outer_Class {
     private static class Inner{
-        public int x;
+        public static int x;
         public static void setX(int y){
-            y = x;
+            x = y;
         }
         public static int getX(){
             return x;
@@ -16,7 +16,7 @@ public class Outer_Class {
         public int x;
 
     }
-    public void set() {
+    public static void set() {
         Inner.setX(1);
         //Inner1.x = 11;
         //Inner2.x = 22;
