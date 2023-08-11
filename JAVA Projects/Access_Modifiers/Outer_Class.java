@@ -33,7 +33,7 @@ public class Outer_Class {
         Inner2.setX(22);
     }
     public void Show(){
-        System.out.println("Show ex "+Inner.getX()+Inner1.getX()+Inner2.getX());
+        System.out.println("Show values "+Inner.getX()+Inner1.getX()+Inner2.getX());
     }
     Inner obj = new Inner();
     Inner1 obj0 = new Inner1();
