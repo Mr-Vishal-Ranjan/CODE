@@ -1,7 +1,7 @@
 package Access_Modifiers;
 public class Outer_Class {
     private static class Inner{
-        public static int x;
+        private static int x;
         public static void setX(int y){
             x = y;
         }
@@ -10,19 +10,30 @@ public class Outer_Class {
         }
     }
     public static class Inner1{
-        public int x;
+        private static int x;
+        public static void setX(int y){
+            x = y;
+        }
+        public static int getX(){
+            return x;
+        }
     }
     protected static class Inner2{
-        public int x;
-
+        private static int x;
+        public static void setX(int y){
+            x = y;
+        }
+        public static int getX(){
+            return x;
+        }
     }
     public static void set() {
         Inner.setX(1);
-        //Inner1.x = 11;
-        //Inner2.x = 22;
+        Inner1.setX(11);
+        Inner2.setX(22);
     }
     public void Show(){
-        System.out.println("Show ex "+Inner.getX());
+        System.out.println("Show ex "+Inner.getX()+Inner1.getX()+Inner2.getX());
     }
     Inner obj = new Inner();
     Inner1 obj0 = new Inner1();
