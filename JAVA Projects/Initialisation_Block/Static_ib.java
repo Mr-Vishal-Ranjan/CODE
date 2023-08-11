@@ -12,6 +12,5 @@ public class Static_ib {
 
     public static void main(String[] args) {
         Static_ib object = new Static_ib();
-
     }
 }
