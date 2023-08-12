@@ -2,7 +2,6 @@ package This_Keyword;
 
 public class This {
     public int l , b , h ;
-
     public void setL(int l){
         this.l = l;
     }
