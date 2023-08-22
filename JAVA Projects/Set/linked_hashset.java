@@ -11,7 +11,7 @@ public class linked_hashset {
 
         LinkedList x= new LinkedList();
         x.add("One");
-        x.add("two"+"three");
+        x.add("two");
 
         LinkedHashSet c = new LinkedHashSet(x);
     }
