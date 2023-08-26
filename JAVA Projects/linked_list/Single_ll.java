@@ -8,7 +8,6 @@ public class Single_ll {
         }
         public Node next;
     }
-
     public static void main(String[] args) {
         Node head= new Node();
         head.SetValue(1);
