@@ -22,7 +22,6 @@ public class Selection_Sort {
             arr[small] = a[1];
         }
     }
-
     public static void main(String[] args) {
         int[] arr={5,3,4,2,1};
         sort(arr);
