@@ -1,7 +1,4 @@
 package Sorting;
-
-import java.util.Arrays;
-
 public class Selection_Sort {
     public static int[] swap(int x , int y){
         x = x + y;
@@ -25,6 +22,8 @@ public class Selection_Sort {
     public static void main(String[] args) {
         int[] arr={5,3,4,2,1};
         sort(arr);
-        System.out.println(Arrays.toString(arr));
+        for(int i = 0;i< arr.length;i++) {
+            System.out.print(arr[i]+",");
+        }
     }
 }
