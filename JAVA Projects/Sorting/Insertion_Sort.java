@@ -4,15 +4,14 @@ import static Sorting.Selection_Sort.swap;
 
 public class Insertion_Sort {
     public static void sort(int[] arr){
-        for (int i = 0;i< arr.length-1;){
-            int temp = i;
-            while(temp!= arr.length-1){
-                if(arr[temp]>arr[temp+1]){
-                    arr[temp] = arr[temp]+arr[temp+1];
-                    arr[temp+1] = arr[temp] - arr[temp+1];
-                    arr[temp]=arr[temp] - arr[temp+1];
-                    temp += 1;
-                }else {i++;break;};
+        for (int i = 1;i< arr.length;i++){
+            for(int j = i - 1;j >= 0; j--){
+                if(arr[j]>arr[i]){
+                    arr[i]=arr[i]+arr[j];
+                    arr[j]=arr[i]-arr[j];
+                    arr[i]=arr[i]-arr[j];
+                    i--;
+                }
             }
         }
     }
