@@ -14,7 +14,6 @@ public class StacK {
         arr[top] = 0;
         top--;
     }
-
     public int peek() {
         return arr[top];
     }
