@@ -31,7 +31,6 @@ public class Merge_Sort {
             j++;temp++;
         }
     }
-
     public static void divide(int[] arr, int start, int end) {
         int mid = start + (end - start) / 2;
         if (start < end) {
