@@ -1,7 +1,7 @@
 package Stack;
 
 public class StacK {
-    private int size = 2;
+    private int size = 5;
     private int[] arr = new int[size];
     private int top = -1;
 
@@ -15,7 +15,9 @@ public class StacK {
         top--;
     }
     public int peek() {
+        if (top>=0)
         return arr[top];
+        else return -1;
     }
 
     public boolean isEmpty() {
