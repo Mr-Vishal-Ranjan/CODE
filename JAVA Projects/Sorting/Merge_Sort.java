@@ -39,7 +39,6 @@ public class Merge_Sort {
             merge(arr, start, mid, end);
         }
     }
-
     public static void main(String[] args) {
         int[] arr={5,8,3,6,2};
         divide(arr,0, arr.length-1);
