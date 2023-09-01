@@ -1,7 +1,7 @@
 package Queue;
 
 public class Queue {
-    private int size = 2;
+    private int size = 5;
     private int[] arr= new int[size];
     private int insert = 0;
     public void enqueue(int value){
