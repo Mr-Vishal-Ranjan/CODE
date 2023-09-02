@@ -1,7 +1,5 @@
 package Stack;
-
 import Queue.Queue;
-
 public class StackToQueue {
     public static void main(String[] args) {
         StacK s = new StacK();
