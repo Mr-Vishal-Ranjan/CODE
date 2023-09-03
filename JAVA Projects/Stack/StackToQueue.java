@@ -1,5 +1,7 @@
 package Stack;
+
 import Queue.Queue;
+
 public class StackToQueue {
     public static void main(String[] args) {
         StacK s = new StacK();
@@ -8,7 +10,7 @@ public class StackToQueue {
         s.push(2);
         s.push(3);
         s.push(4);
-        while(s.peek()>0){
+        while (s.peek() > 0) {
             q.enqueue(s.peek());
             s.pop();
         }
