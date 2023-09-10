@@ -24,7 +24,6 @@ public class Plindrome_inString {
         }
         return v;
     }
-
     public static void main(String[] args) {
         String s="ccc";
         longestPalindrome(s);
