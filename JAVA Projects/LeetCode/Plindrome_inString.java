@@ -15,7 +15,7 @@ public class Plindrome_inString {
             }
         }
         x=a;y=b;
-        for(;a<=b;a++,b--){
+        for(;a<y;a++,b--){
             if(s.charAt(a)!=s.charAt(b))break;;
         }
         String v=s.substring(0,1);
@@ -25,7 +25,7 @@ public class Plindrome_inString {
         return v;
     }
     public static void main(String[] args) {
-        String s="ccc";
+        String s="aaaa";
         longestPalindrome(s);
     }
 }
