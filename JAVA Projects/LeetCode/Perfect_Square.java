@@ -16,7 +16,6 @@ public class Perfect_Square {
         }
         return false;
     }
-
     public static void main(String[] args) {
         int num = 5;
         isPerfectSquare(num);
