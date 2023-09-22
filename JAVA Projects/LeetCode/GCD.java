@@ -1,5 +1,4 @@
 package LeetCode;
-
 public class GCD {
     public static int calcGCD(int n, int m){
         int  divisor,divident,remainder;
