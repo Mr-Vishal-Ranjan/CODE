@@ -21,7 +21,6 @@ public class Armstrong {
         }
         return number == sum;
     }
-
     public static void main(String[] args) {
         int num=123;
         System.out.print(Check_Armstrong(num));
