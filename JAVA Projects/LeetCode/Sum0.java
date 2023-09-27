@@ -9,7 +9,6 @@ public class Sum0 {
         }
         return sum;
     }
-
     public static long sumFirstN(long n) {
         // Write your code here.
         long sum = 0;
