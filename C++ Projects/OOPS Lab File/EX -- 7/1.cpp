@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class A{
+    private:
+    int a,b;
+
+    public:
+    void get(){
+        cin>>a>>b;
+    }
+    void show(){
+        cout<<a<<" "<<b;
+    }
+};
+
+int main()
+{
+    A obj;
+    obj.get();
+    obj.show();
+}
