@@ -25,6 +25,7 @@ public class D_LL {
         }
         return head;
     }
+
     public static void main(String[] args){
         Node head = create_ll();
         print_ll(head);
